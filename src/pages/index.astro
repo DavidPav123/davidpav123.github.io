@@ -23,8 +23,7 @@ const links = await getRecipeLinks();
 <Layout title="David's Recipes">
   <main>
     <header><h1>David's Recipes</h1></header>
-    <p>My collection of recipes. Still a work in progress.</p>
-    <ul>
+    <ul id="Recipe-List">
         {links.map(link => (
           <li><a href={link.href}>{link.title}</a></li>
         ))}
