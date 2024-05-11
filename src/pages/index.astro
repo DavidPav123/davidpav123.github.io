@@ -1,10 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+// Import all recipe pages from the recipes folder
+const recipePages = import.meta.glob('./recipes/*.astro');
+
+// Function to extract slugs from file paths
+async function getRecipeLinks() {
+    const paths = Object.keys(recipePages);
+    const links = paths.map(path => {
+        const slug = path.split('/').pop().replace(/\.astro$/, '');
+        return {
+            href: `/recipes/${slug}`,
+            title: slug 
+        };
+    });
+    return links;
+}
+
+const links = await getRecipeLinks();
 ---
 
 <Layout title="David's Recipes">
   <main>
     <header><h1>David's Recipes</h1></header>
     <p>My collection of recipes. Still a work in progress.</p>
+    <ul>
+        {links.map(link => (
+          <li><a href={link.href}>{link.title}</a></li>
+        ))}
+      </ul>
   </main>
 </Layout>
