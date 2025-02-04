@@ -26,35 +26,36 @@ const { title } = Astro.props;
 <style is:global>
   html {
     font-family: monospace;
-    color: gold;
-    background: #363636;
+    color: #e0ece4;
+    background: #1e2e28;
     margin: auto;
     max-width: 850px;
     font-size: larger;
   }
   h1 {
     text-align: center;
-    color: tomato;
+    color: #6ac16e;
     border-width: 0px 0px 2px 0px;
     border-style: solid;
-    font-size: 2.5vw;
+    font-size: XXX-large;
   }
   h3 {
-    color: tomato;
+    color: #6ac16e;
   }
   a {
-    color: gold;
+    color: #e0ece4;
     text-decoration: none;
-  }
-  a:visited {
-    color: darkgoldenrod;
+    font-size: x-large;
+    /* Increase the size of the recipes names then add subtext including the ingredients of the dish that are small and italicized. */
   }
   footer {
     text-align: center;
-    color: tomato;
+    color: #6ac16e;
     border-width: 2px 0px 0px 0px;
     border-style: solid;
-    font-size: larger;
+    a {
+        font-size: xx-large;
+    }
   }
   #Recipe-List {
     column-count: 2;
