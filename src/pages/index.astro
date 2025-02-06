@@ -1,10 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-// Import all recipe pages from the recipes folder
-const recipePages = import.meta.glob("./recipes/*.astro");
+// Import recipes with frontmatter
+const recipePages: Record<string, string[]> = import.meta.glob(
+  "./recipes/*.astro",
+  {
+    eager: true,
+    import: "frontmatter",
+  }
+);
 
-// Function to extract slugs from file paths and sort them alphabetically
 async function getRecipeLinks() {
   const paths = Object.keys(recipePages);
   const links = paths
@@ -15,7 +20,8 @@ async function getRecipeLinks() {
         .replace(/\.astro$/, "");
       return {
         href: `/recipes/${slug}`,
-        title: slug,
+        title: recipePages[path].title,
+        ingredients: recipePages[path].ingredients,
       };
     })
     .sort((a, b) => a.title.localeCompare(b.title));
@@ -31,11 +37,48 @@ const links = await getRecipeLinks();
     <ul id="Recipe-List">
       {
         links.map((link) => (
-          <li>
-            <a href={link.href}>{link.title}</a>
+          <li class="recipe-item">
+            <a href={link.href} class="recipe-title">
+              {link.title}
+            </a>
+            {link.ingredients.length > 0 && (
+              <p class="ingredients">{link.ingredients.join(", ")}</p>
+            )}
           </li>
         ))
       }
     </ul>
   </main>
 </Layout>
+
+<style>
+  #Recipe-List {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .recipe-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+
+  .recipe-title {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: #e0ece4;
+  }
+
+  .ingredients {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #818883;
+    line-height: 1.4;
+    font-style: italic;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+</style>
