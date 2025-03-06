@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const frontmatter = {
+    title: "Pizza",
+    ingredients: ["Pizza Dough", "Tomato Sauce", "Mozzarella"],
+};
+---
+
+<Layout title="Pizza">
+    <main>
+        <header>
+            <h1>Pizza</h1>
+        </header>
+        <p>Home oven pizza recipe.</p>
+        <ul>
+            <li>Preparation Time: 5 minutes</li>
+            <li>Cooking Time: 10 minutes</li>
+            <li>Servings: 1 Pizza</li>
+        </ul>
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Pizza Dough</li>
+            <li>Tomato Sauce</li>
+            <li>Shredded Mozzarella*</li>
+        </ul>
+        <h3>Recipe</h3>
+        <ol>
+            <li>Preheat oven to its hottest setting.</li>
+            <li>
+                Stretch the pizza dough over an oiled and lightly floured pizza
+                pan or other baking sheet. Be careful to press down on the dough
+                as little as possible so the air bubbles in the dough don't pop.
+                Top with a thin layer of sauce, a sprinkling of shredded
+                mozzarella, and other toppings. Place into the hot oven.
+            </li>
+            <li>
+                When many spots of dark brown cheese have appeared on the top of
+                the pizza its ready to be taken out of the oven.
+            </li>
+        </ol>
+        <h3>Notes</h3>
+        <p>
+            <ul>
+                <li>
+                    The ideal Mozzarella to use for the pizza is low moisture
+                    mozzarella you shred yourself. Despite this any mozzarella
+                    will work but results will vary.
+                </li>
+            </ul>
+            Adapted from: <a href="https://www.youtube.com/watch?v=SDpCzJw2xm4">
+                Adam Ragusea
+            </a>
+        </p>
+    </main>
+</Layout>
