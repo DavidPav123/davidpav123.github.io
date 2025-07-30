@@ -1,38 +1,54 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 export const frontmatter = {
-  title: "Steak",
-  ingredients: ["Steak", "Salt", "Oil"],
+    title: "Steak",
+    ingredients: ["Steak", "Salt", "Oil"],
 };
 ---
 
 <Layout title="Steak">
-  <main>
-    <header>
-      <h1>Steak</h1>
-    </header>
-    <p>
-        A good basic steak recipe.
-    </p>
-    <ul>
-      <li>Preparation Time: 0 - 12 hours</li>
-      <li>Cooking Time: 30 minutes</li>
-      <li>Servings: 1 Steak</li>
-    </ul>
-    <h3>Ingredients</h3>
-    <ul>
-        <li>Steak</li>
-        <li></li>
-    </ul>
-    <h3>Recipe</h3>
-    <ol>
-    </ol>
-    <h3>Notes</h3>
-    <p>
-      Adapted from: <a
-        href="https://www.brianlagerstrom.com/recipes/1-dough-3-loaves-2"
-        >Brian Langerstrom</a
-      >
-    </p>
-  </main>
+    <main>
+        <header>
+            <h1>Steak</h1>
+        </header>
+        <p>A basic steak recipe.</p>
+        <ul>
+            <li>Preparation Time: 0 - 12 hours</li>
+            <li>Cooking Time: 30 minutes</li>
+            <li>Servings: 1 Steak</li>
+        </ul>
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Steak</li>
+            <li>Salt</li>
+            <li>Oil</li>
+        </ul>
+        <h3>Recipe</h3>
+        <ol>
+            <li>
+                Season the steak all over with salt and place on a wire rack in
+                a sheet pan. Leave in the fridge over night if desired or move
+                on to next step.
+            </li>
+            <li>
+                Place the steak in a 275°F oven and cook until a thermometer
+                reads 105°F for rare, 115°F for medium-rare, 125°F for medium,
+                or 135°F for medium-well, about 20-40 mintes.
+            </li>
+            <li>
+                Just before the steak comes out of the oven, add 1 tablespoon of
+                oil to a cast iron pan and heat over high heat until smoking.
+                Add steak to pan and cook until each side is well browned, about
+                45 seconds per side. Using tongs, hold steak sideways to sear
+                edges. Serve.
+            </li>
+        </ol>
+        <h3>Notes</h3>
+        <p>
+            Adapted from: <a
+                href="https://www.seriouseats.com/reverse-seared-steak-recipe"
+                >J. Kenji López-Alt</a
+            >
+        </p>
+    </main>
 </Layout>
