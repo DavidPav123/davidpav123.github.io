@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const frontmatter = {
+    title: "Kimchi",
+    ingredients: ["Cabbage"],
+};
+---
+
+<Layout title="Kimchi">
+    <main>
+        <header>
+            <h1>Kimchi</h1>
+        </header>
+        <p>A nice fermented treat.</p>
+        <ul>
+            <li>Preparation Time: 12 hour</li>
+            <li>Servings: A couple jars</li>
+        </ul>
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Cabbage</li>
+        </ul>
+        <h3>Recipe</h3>
+        <ol>
+            <li>1.</li>
+        </ol>
+        <h3>Notes</h3>
+        <p>
+            Adapted from: <a
+                href="https://thekoreanvegan.com/the-best-easy-vegan-kimchi-recipe/"
+                >The Korean Vegan</a
+            >
+        </p>
+    </main>
+</Layout>
