@@ -10,10 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.0.4"
+    "astro": "^6.0.4",
+    "tree-sitter-cli": "^0.26.8"
   },
   "devDependencies": {
-    "prettier": "^3.6.2",
+    "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1"
   }
 }

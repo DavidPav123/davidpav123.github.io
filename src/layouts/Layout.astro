@@ -1,6 +1,6 @@
 ---
 interface Props {
-  title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
@@ -8,52 +8,52 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
-  </head>
-  <body>
-    <slot />
-  </body>
-  <footer>
-    <p>
-      <a href="/">Home</a>
-    </p>
-  </footer>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{title}</title>
+    </head>
+    <body>
+        <slot />
+    </body>
+    <footer>
+        <p>
+            <a href="/">Home</a>
+        </p>
+    </footer>
 </html>
 <style is:global>
-  html {
-    font-family: monospace;
-    color: #e0ece4;
-    background: #1E2E28;
-    margin: auto;
-    max-width: 850px;
-    font-size: larger;
-  }
-  h1 {
-    text-align: center;
-    color: #6ac16e;
-    border-width: 0px 0px 2px 0px;
-    border-style: solid;
-    font-size: XXX-large;
-  }
-  h3 {
-    color: #6ac16e;
-  }
-  a {
-    color: #e0ece4;
-    text-decoration: none;
-    font-size: large;
-  }
-  footer {
-    text-align: center;
-    color: #6ac16e;
-    border-width: 2px 0px 0px 0px;
-    border-style: solid;
-    a {
-      font-size: xx-large;
+    html {
+        font-family: monospace;
+        color: #e0ece4;
+        background: #1e2e28;
+        margin: auto;
+        max-width: 850px;
+        font-size: larger;
     }
-  }
+    h1 {
+        text-align: center;
+        color: #6ac16e;
+        border-width: 0px 0px 2px 0px;
+        border-style: solid;
+        font-size: XXX-large;
+    }
+    h3 {
+        color: #6ac16e;
+    }
+    a {
+        color: #e0ece4;
+        text-decoration: none;
+        font-size: large;
+    }
+    footer {
+        text-align: center;
+        color: #6ac16e;
+        border-width: 2px 0px 0px 0px;
+        border-style: solid;
+        a {
+            font-size: xx-large;
+        }
+    }
 </style>
