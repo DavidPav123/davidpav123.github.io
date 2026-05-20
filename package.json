@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.0.4",
+    "astro": "^6.3.6",
     "tree-sitter-cli": "^0.26.8"
   },
   "devDependencies": {
